@@ -1,0 +1,27 @@
+{
+  "name": "shopping-portal",
+  "version": "1.0.0",
+  "description": "A simple shopping portal with a cart and list of products",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkat4541/Angular-shopping-portal.git"
+  },
+  "author": "Venkat Polumahanti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/venkat4541/Angular-shopping-portal/issues"
+  },
+  "homepage": "https://github.com/venkat4541/Angular-shopping-portal#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
