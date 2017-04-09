@@ -2,17 +2,35 @@
 <html ng-app="shop">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Shopping Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="ShopCtrl">
     <div class="container">
-      {{ test }}
+      <nav>
+        <div class="nav-left">
+          <h4>Shopping Portal</h4>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>Cart</li>
+            <li>Sign In</li>
+          </ul>
+        </div>
+      </nav>
+      <section class="main">
+        <div class="col-12 col-lg-4 item" ng-repeat="number in numbers">
+          <h3>{{ number.itemName }}</h3>
+          <img ng-src="{{ number.imgSrc }}" alt="">
+          <p>{{ number.price }}</p>
+          <p>{{ number.quantityRemaining }}</p>
+        </div>
+      </section>
     </div>
 
-    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular-route.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
