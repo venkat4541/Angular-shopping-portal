@@ -33,11 +33,14 @@ nav li {
 }
 
 .item {
-  padding: 10px;
+  display: inline-block;
+  background: #f6f6f6;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .item img {
-  width: 200px;
-  height: 150px;
-  border: 3px solid #ddd;
+  width: 125px;
+  height: 100px;
+  margin-bottom: 5px;
 }

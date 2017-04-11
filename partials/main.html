@@ -1,0 +1,11 @@
+<section class="main">
+  <div class="col-xs-6 col-sm-3 item" ng-repeat="item in shopData">
+    <h4>{{ item.itemName | uppercase }}</h4>
+    <div class="col-12">
+      <img ng-src="{{ item.imgSrc }}" alt="..." class="img-thumbnail">
+    </div>
+    <b> {{ item.price | currency }}</b>
+    <p><i>
+      {{ item.quantityRemaining }} in stock</i></p>
+  </div>
+</section>

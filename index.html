@@ -14,23 +14,19 @@
         </div>
         <div class="nav-right">
           <ul>
-            <li>Cart</li>
-            <li>Sign In</li>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="#login">Login</a></li>
           </ul>
         </div>
       </nav>
-      <section class="main">
-        <div class="col-12 col-lg-4 item" ng-repeat="number in numbers">
-          <h3>{{ number.itemName }}</h3>
-          <img ng-src="{{ number.imgSrc }}" alt="">
-          <p>{{ number.price }}</p>
-          <p>{{ number.quantityRemaining }}</p>
-        </div>
-      </section>
+      <ng-view></ng-view>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular-route.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/CartCtrl.js"></script>
+    <script src="js/LoginCtrl.js"></script>
   </body>
 </html>

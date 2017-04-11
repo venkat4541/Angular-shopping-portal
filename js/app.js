@@ -1,12 +1,34 @@
-var app = angular.module('shop',[]);
+var app = angular.module('shop',['ngRoute']);
 
-app.controller('ShopCtrl', ['$scope', function($scope) {
+app.config(function($routeProvider) {
+   $routeProvider
+    .when("/", {
+      templateUrl: "partials/main.html"
+    })
+    .when("/cart", {
+      templateUrl: "partials/cart.html",
+      controller: "CartCtrl"
+    })
+    .when("/login", {
+      templateUrl: "partials/Login.html",
+      controller: "LoginCtrl"
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
+
+app.controller('ShopCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.numbers = [
     {
-      "itemName": "banana",
-      "imgSrc": "https://tinyurl.com/zcdrymz",
-      "price": 1.25,
-      "quantityRemaining": 10
+      "itemName": "",
+      "imgSrc": "",
+      "price": 0,
+      "quantityRemaining": 0
     }
   ];
+  $http.get('store_items.json')
+    .then(function(response) {
+      $scope.shopData = response.data;
+  });
 }]);
